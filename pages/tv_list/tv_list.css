@@ -1,0 +1,136 @@
+.search_panel {
+	width: 750rpx;
+	height: 280rpx;
+	/* border: 1px solid red; */
+	background-color: #F7F7F7;
+	/* box-shadow: 5px 5px 5px #F1F1F1; */
+	position: fixed;
+}
+
+.search_type {
+	position: absolute;
+	bottom: 0;
+	width: 750rpx;
+	/* border: 1px solid yellow; */
+	/* height: 350rpx; */
+}
+
+.search_panel {
+	/* position: relative; */
+	position: fixed;
+	top: 0;
+	z-index: 100;
+}
+
+
+.search_box {
+	width: 600rpx;
+	height: 50rpx;
+	margin: 0 auto;
+	margin-top: 5rpx;
+	border-radius: 10px;
+	background-color: white;
+	box-shadow: 5px 5px 5px #F1F1F1;
+	color: #808080;
+	/* border: 1px solid blue; */
+}
+
+.search_icon {
+	display: inline-block;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.search {
+	display: inline-block;
+}
+
+.search_type_item {
+	width: 750rpx;
+	height: 60rpx;
+	padding-top: 10rpx;
+	padding-left: 10rpx;
+	/* border-bottom: 1px dashed #808080; */
+}
+
+.search_type_item_title {
+	display: inline-block;
+	margin-right: 5rpx;
+	padding: 5rpx 15rpx;
+	color: #808080;
+}
+
+.search_item_active {
+	color: #1A94E6;
+	background-color: #DDDDDD;
+	box-shadow: 5px 5px 5px #F1F1F1;
+	border-radius: 10px;
+	padding: 5rpx 15rpx;
+}
+
+.item_list {
+	display: inline-block;
+	color: #808080;
+}
+
+.item {
+	padding-left: 5rpx;
+	padding-right: 5rpx;
+	display: inline-block;
+}
+
+.tv_list {
+	margin-top: 10rpx;
+	/* padding-left: 30rpx; */
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.search_white_space {
+	width: 100%;
+	height: 260rpx;
+}
+
+/* .tv_item {
+	width: 335rpx;
+	height: 500rpx;
+	page-break-inside: avoid;
+	break-inside: avoid;
+	box-shadow: 5px 5px 5px #DDDDDD;
+}
+
+.tv_cover {
+	width: 100%;
+	height: 100%;
+	border-radius: 5upx 5upx 0upx 0upx;
+	box-shadow: 5upx 5upx 5upx #C0C0C0;
+}
+
+.tv_cover_wrapper {
+	width: 100%;
+	height: 92%;
+	border-radius: 5upx 5upx 0upx 0upx;
+}
+
+.end_tag {
+	width: 35upx;
+	height: 35upx;
+}
+
+.tv_desc {
+	color: #808080;
+	text-align: center;
+}
+
+.tv_desc_title {
+	width: 100%;
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+ */

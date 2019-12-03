@@ -1,0 +1,99 @@
+.welike_wrapper {
+	/* background-color: #999999; */
+	width: 550upx;
+	/* height: 1000upx; */
+	margin: 0upx 25upx 0upx 25upx;
+	border-radius: 50upx;
+	display: inline-block;
+	/* background-image: url('../../static/images/movie1.jpg'); */
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-shadow: 5px 5px 12px #C0C0C0;
+}
+
+.index_content {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.scroll-view {
+	width: 100%;
+	/* height: 1000upx; */
+	white-space: nowrap;
+	/* border: 1px solid black; */
+}
+
+.welike_content {
+	width: 100%;
+	height: 20%;
+	background-color: rgb(223, 204, 145);
+	border-radius: 0upx 50upx 50upx 50upx;
+	position: absolute;
+	bottom: 0;
+}
+
+.welike_radius {
+	width: 50upx;
+	height: 50upx;
+	border-radius: 0upx 0upx 0upx 0upx;
+	background: radial-gradient(circle at top right, transparent 50upx, rgb(223, 204, 145) 50upx);
+	position: absolute;
+	bottom: 20%;
+}
+
+.welike_item {
+	width: 100%;
+	height: 100%;
+	/* margin-top: 120%; */
+	position: relative;
+}
+
+/* 去掉滑动块的滚动条 */
+::-webkit-scrollbar {
+	width: 0;
+	height: 0;
+	color: transparent;
+}
+
+.welike_cover {
+	width: 100%;
+	height: 100%;
+	border-radius: 50upx 50upx 0upx 0upx;
+}
+
+.welike_cover_wrapper {
+	width: 100%;
+	height: 85%;
+	border-radius: 50upx 50upx 0upx 0upx;
+}
+
+.welike_title {
+	/* font-family: Times New Roman, Times, serif; */
+	font-family: 黑体, Helvetica, sans-serif;
+	font-weight: 900;
+	font-size: 30px;
+	color: white;
+	padding: 10upx 10upx 5upx;
+}
+
+.welike_desc {
+	/* font-size: 8px; */
+	width: 100%;
+	height: 50%;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 5upx 10upx;
+	box-sizing: border-box;
+	color: white;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	font-size: 15px;
+	white-space: normal;
+	overflow: hidden;
+	
+	/* 多行文本省略号 */
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}

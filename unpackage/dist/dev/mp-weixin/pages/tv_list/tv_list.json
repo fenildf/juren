@@ -1,0 +1,7 @@
+{
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "juren-items": "/componets/jurenItems",
+    "uni-load-more": "/componets/uni/uni-load-more"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/tv_list/tv_list",
+    "pages/index/index",
+    "pages/variety_list/variety_list"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "剧人",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#cdcdcd",
+    "selectedColor": "#515151",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/tv_list/tv_list",
+        "iconPath": "static/images/tv.png",
+        "selectedIconPath": "static/images/tv_active.png",
+        "text": "电视剧"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/images/welike.png",
+        "selectedIconPath": "static/images/welike_active.png",
+        "text": "大家想看"
+      },
+      {
+        "pagePath": "pages/variety_list/variety_list",
+        "iconPath": "static/images/variety.png",
+        "selectedIconPath": "static/images/variety_active.png",
+        "text": "综艺"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

@@ -1,0 +1,1 @@
+<view class="index_content"><juren-items vue-id="1" itemList="{{welikeList}}" bind:__l="__l"></juren-items></view>

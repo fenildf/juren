@@ -1,0 +1,44 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/tv_list/tv_list",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/index/index"
+		}, {
+			"path": "pages/variety_list/variety_list",
+			"style": {}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "剧人",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#cdcdcd",
+		"selectedColor": "#515151",
+		"borderStyle": "white",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/tv_list/tv_list",
+			"iconPath": "static/images/tv.png",
+			"selectedIconPath": "static/images/tv_active.png",
+			"text": "电视剧"
+		}, {
+			"pagePath": "pages/index/index",
+			"iconPath": "static/images/welike.png",
+			"selectedIconPath": "static/images/welike_active.png",
+			"text": "大家想看"
+		}, {
+			"pagePath": "pages/variety_list/variety_list",
+			"iconPath": "static/images/variety.png",
+			"selectedIconPath": "static/images/variety_active.png",
+			"text": "综艺"
+		}]
+	}
+}
