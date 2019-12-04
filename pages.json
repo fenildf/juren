@@ -1,5 +1,9 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+
+		{
+			"path": "pages/index/index"
+		}, 
 		{
 			"path": "pages/tv_list/tv_list",
 			"style": {
@@ -7,12 +11,14 @@
 			}
 		},
 		{
-			"path": "pages/index/index"
-		}, {
 			"path": "pages/variety_list/variety_list",
 			"style": {}
-		}
-	],
+		},
+		{
+            "path" : "pages/content_detail/content_detail",
+            "style" : {}
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "剧人",

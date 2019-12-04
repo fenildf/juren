@@ -1,8 +1,9 @@
 {
   "pages": [
-    "pages/tv_list/tv_list",
     "pages/index/index",
-    "pages/variety_list/variety_list"
+    "pages/tv_list/tv_list",
+    "pages/variety_list/variety_list",
+    "pages/content_detail/content_detail"
   ],
   "subPackages": [],
   "window": {
@@ -37,5 +38,6 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap64.json"
 }

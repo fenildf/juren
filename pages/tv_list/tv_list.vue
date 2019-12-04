@@ -5,7 +5,7 @@
 
 			<view class="search_box">
 				<icon :type="icon_type" size="15" class="search_icon" />
-				<input type="text" class="search" size="50" :placeholder="search_hot_word">
+				<input type="text" class="search" :placeholder="search_hot_word" @input="inputChange">
 
 				</input>
 			</view>
@@ -15,9 +15,9 @@
 					 data-class-name="languages_item_classes" @click="item_click">
 						所有语种
 					</view>
-					<view class="item_list" v-for="(litem, index) in languages_items" @key="index" :data-class-array="languages_item_classes"
+					<view class="item_list" v-for="(litem, index) in languages_items" :key="index" :data-class-array="languages_item_classes"
 					 :data-index="index + 1" data-class-name="languages_item_classes" @click="item_click">
-						<text :class="languages_item_classes[index + 1]">{{litem}}</text>
+						<text :class="languages_item_classes[index + 1]">{{litem.text}}</text>
 					</view>
 				</view>
 
@@ -26,9 +26,9 @@
 					 @click="item_click">
 						所有播放源
 					</view>
-					<view class="item_list" v-for="(litem, index) in source_items" @key="index" :data-class-array="source_item_classes"
+					<view class="item_list" v-for="(litem, index) in source_items" :key="index" :data-class-array="source_item_classes"
 					 :data-index="index + 1" data-class-name="source_item_classes" @click="item_click">
-						<text :class="source_item_classes[index + 1]">{{litem}}</text>
+						<text :class="source_item_classes[index + 1]">{{litem.text}}</text>
 					</view>
 				</view>
 
@@ -37,9 +37,9 @@
 					 @click="item_click">
 						所有更新状态
 					</view>
-					<view class="item_list" v-for="(litem, index) in update_items" @key="index" :data-class-array="update_item_classes"
+					<view class="item_list" v-for="(litem, index) in update_items" :key="index" :data-class-array="update_item_classes"
 					 :data-index="index + 1" data-class-name="update_item_classes" @click="item_click">
-						<text :class="update_item_classes[index + 1]">{{litem}}</text>
+						<text :class="update_item_classes[index + 1]">{{litem.text}}</text>
 					</view>
 				</view>
 			</view>
@@ -66,6 +66,12 @@
 				icon_type: 'search',
 				search_hot_word: '庆余年',
 				loadingType: 'nomore',
+				search_param: {
+					searchWord: this.search_hot_word,
+					lanaguage: null,
+					source: null,
+					updateStatus: null
+				},
 				languages_item_classes: [
 					['search_type_item_title', 'search_item_active'],
 					['item'],
@@ -88,9 +94,48 @@
 					['item'],
 					['item']
 				],
-				languages_items: ['国产剧', '美剧', '韩剧', '日剧', '其他'],
-				source_items: ['优酷', '爱奇艺', '搜狐', '腾讯', '其他'],
-				update_items: ['完结', '更新中', '即将播放'],
+				languages_items: [{
+					text: '国产剧',
+					value: 1
+				}, {
+					text: '美剧',
+					value: 2
+				}, {
+					text: '韩剧',
+					value: 3
+				}, {
+					text: '日剧',
+					value: 4
+				}, {
+					text: '其他',
+					value: 5
+				}],
+				source_items: [{
+					text: '优酷',
+					value: 1
+				}, {
+					text: '爱奇艺',
+					value: 2
+				}, {
+					text: '搜狐',
+					value: 3
+				}, {
+					text: '腾讯',
+					value: 4
+				}, {
+					text: '其他',
+					value: 5
+				}],
+				update_items: [{
+					text: '完结',
+					value: 1
+				}, {
+					text: '更新中',
+					value: 2
+				}, {
+					text: '即将播放',
+					value: 3
+				}],
 				search_list: [{
 						id: 1,
 						imageURL: '../static/images/movie1.jpg',
@@ -170,16 +215,54 @@
 			item_click: function(e) {
 				// 样式变化
 				let classArray = e.currentTarget.dataset.classArray;
+				let index = e.currentTarget.dataset.index;
 				for (var i = 0; i < classArray.length; i++) {
 
 					if (classArray[i].length > 1) {
 						classArray[i].pop();
 					}
 				}
-				classArray[e.currentTarget.dataset.index].push('search_item_active');
+				classArray[index].push('search_item_active');
 				this[e.currentTarget.dataset.className] = classArray;
-				//发送请求
 				
+				//每次点击更新参数
+				if (e.currentTarget.dataset.className.includes('language')) {
+					this.search_param.lanaguage = this.languages_items[index - 1].value;
+				} else if (e.currentTarget.dataset.className.includes('source')) {
+					this.search_param.source = this.source_items[index - 1].value;
+				} else if (e.currentTarget.dataset.className.includes('update')) {
+					this.search_param.updateStatus = this.update_items[index - 1].value;
+				}
+				
+				//发送请求
+				// console.log(this.search_param);
+				this.searchRequest();
+
+			},
+			inputChange: function(e) {
+				this.search_param.searchWord = e.detail.value;
+				this.searchRequest();
+			},
+			searchRequest: function() {
+				console.log('发送请求！');
+				
+				uni.showLoading({
+					title: '加载中'
+				});
+				
+				setTimeout(function(){
+					uni.hideLoading();
+				}, 500);
+				
+				
+				// uni.request({
+				// 	url:'',
+				// 	method: 'POST',
+				// 	data: this.search_param,
+				// 	success: (res) => {
+				// 		console.log(res);
+				// 	}
+				// })
 			}
 		},
 		onReachBottom: function() {

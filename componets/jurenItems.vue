@@ -1,6 +1,7 @@
 <template>
 	<view class="list_wrapper">
-		<view :id="tvItem.id" class="welike_wrapper" v-for="(tvItem, index) in itemList" :key="index" :data-index="index">
+		<view :id="tvItem.id" class="welike_wrapper" v-for="(tvItem, index) in itemList" :key="index" :data-index="index"
+		 @click="gotoDetail">
 			<view class="welike_item">
 				<!-- 封面 -->
 				<view class="welike_cover_wrapper">
@@ -32,6 +33,14 @@
 		},
 		created() {
 			// console.log(this.itemList);
+		},
+		methods: {
+			gotoDetail: function(e) {
+				let id = e.currentTarget.id;
+				uni.navigateTo({
+					url: `/pages/content_detail/content_detail?id=${id}`
+				});
+			}
 		}
 
 	}

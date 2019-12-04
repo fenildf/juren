@@ -43,6 +43,7 @@
 
 .search {
 	display: inline-block;
+	width: 500rpx;
 }
 
 .search_type_item {
