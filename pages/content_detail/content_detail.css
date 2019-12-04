@@ -1,0 +1,167 @@
+/*每个页面公共css */
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	background-color: #F7F7F7;
+}
+
+.view_player_wrapper {
+	width: 100%;
+	height: 500rpx;
+	margin-bottom: 20rpx;
+}
+
+.player {
+	width: 100%;
+	height: 500rpx;
+}
+
+/* 顶部tabbar */
+.nav-bar {
+	position: relative;
+	z-index: 10;
+	height: 100upx;
+	white-space: nowrap;
+	/* box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, .06); */
+	background-color: #fff;
+}
+
+.nav-item {
+	display: inline-block;
+	width: 230upx;
+	height: 90upx;
+	text-align: center;
+	line-height: 90upx;
+	font-size: 30upx;
+	color: #303133;
+	/* position: relative; */
+}
+
+.current {
+	color: #007aff;
+	border-bottom: 5rpx solid #007aff;
+}
+
+.swiper-box {
+	height: 500rpx;
+	/* box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, .06); */
+}
+
+.panel-scroll-box {
+	height: 500rpx;
+}
+
+.panel-item {
+	background: #fff;
+	padding: 30px 0;
+	border-bottom: 2px solid #000;
+}
+
+.tab-panel {
+	width: 690rpx;
+	height: 740rpx;
+	color: #808080;
+	background-color: white;
+}
+
+.description {
+	color: #808080;
+	padding: 40rpx;
+	text-indent: 34px;
+	/* text-overflow: ellipsis; */
+	overflow-y: hidden;
+	height: 500rpx;
+}
+
+.actors_image {
+	width: 120rpx;
+	height: 120rpx;
+	border-radius: 60rpx;
+}
+
+.actor_wrapper {
+	/* border: 1px solid red; */
+	height: 170rpx;
+	width: 120rpx;
+	padding: 20rpx;
+	font-size: 10px;
+}
+
+.actors {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.actors_name,
+.actors_role {
+	text-align: center;
+}
+
+.sources_image {
+	width: 120rpx;
+	height: 120rpx;
+	/* border-radius: 60rpx; */
+}
+
+.sources_wrapper {
+	/* border: 1px solid red; */
+	height: 170rpx;
+	width: 120rpx;
+	padding: 20rpx;
+	font-size: 10px;
+}
+
+.sources {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.sources_name {
+	text-align: center;
+}
+
+.content_title_wrapper {
+	width: 690rpx;
+	/* box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, .06); */
+}
+
+.content_title {
+	font-size: 20px;
+	margin-top: 20rpx;
+}
+
+.content_date {
+	color: #808080;
+	font-size: 12px;
+}
+
+.title_wrapper {
+	padding-left: 20rpx;
+}
+
+.welike_default {
+	width: 40rpx;
+	height: 40rpx;
+	display: inline-block;
+	line-height: 80rpx;
+}
+
+.welike {
+	width: 100%;
+	height: 80rpx;
+	background-color: red;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	line-height: 80rpx;
+}
+
+.welike_font {
+	color: white;
+}
